@@ -2,6 +2,7 @@ yiiSwoole
 ========
 
 Yii 1.1.16 with Swoole Http_Server
+
 ## Requirements
 
 * PHP 5.3+
@@ -32,5 +33,5 @@ Yii 1.1.16 with Swoole Http_Server
 3. Open your browser and enter http://ip:9501
 
 ## run with php-fpm
-this application still run with php-fpm,
+this application in a state of  beta,if you find some bug,it can run with php-fpm
 Open your browser and enter http://ip/index.php
