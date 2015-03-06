@@ -28,10 +28,11 @@ Yii 1.1.16 with Swoole Http_Server
     make && make install
     ```
 ## How to run
-1. cd yiiSwoole
+1. cd yiiSwoole/application
 2. php server.php
 3. Open your browser and enter http://ip:9501
 
 ## Run with php-fpm
 1. This application in a state of  beta,if you find some bug,it can run with php-fpm to fix bug
-2. Open your browser and enter http://ip/index.php
+2.set nginx root dir with yiiSwoole/application
+3. Open your browser and enter http://ip/index.php

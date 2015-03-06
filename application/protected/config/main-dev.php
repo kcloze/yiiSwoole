@@ -50,9 +50,9 @@ return array(
             'charset' => 'utf8',
             'tablePrefix' => 'cms_',
         ),
-        'errorHandler'=>array(
+        /*'errorHandler'=>array(
           'errorAction'=>'error/index',
-        ), 
+        ),*/ 
         'urlManager' => require(dirname(__FILE__) . DS . 'url.php'),
         'log' => array(
             'class' => 'CLogRouter',
