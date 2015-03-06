@@ -1,0 +1,30 @@
+/* here you can put your own css to customize and override the theme */
+#fileListWarp li{
+  list-style: none;
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+}
+.calendar{
+  clear: both;
+}
+.calendar li{
+  list-style: none;
+  float: left;
+  display: inline-block;
+  margin-right: 10px;
+}
+#searchForm .form-group{
+  margin-bottom: 10px;
+}
+.formError{
+  top: 7px !important;
+  right: 20px !important;
+  left: auto !important;
+  margin-top: 0 !important;
+  color: red;
+}
+#login-wrap .errorMessage{
+ color: red; 
+ line-height: 20px;
+}

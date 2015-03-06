@@ -1,0 +1,17 @@
+/assets
+/protected/runtime
+/uploads
+/.tags_sorted_by_file
+/.tags
+/.settings
+/.buildpath
+/.project
+/yiiEnv.php
+/nbproject/private/
+/nbproject/project.properties
+/nbproject/project.xml
+/protected/controllers/HelloController.php
+/static/admin/css/css
+/static/admin/fonts
+/static/admin/js/js
+/protected/modules/admini/views/btest
