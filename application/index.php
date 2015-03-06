@@ -9,18 +9,17 @@
  * 
  * 
  */
-require_once ('yiiEnv.php');
-error_reporting(E_ERROR | E_WARNING | E_PARSE);
+define('YII_ENV', 'development');
 define('DS', DIRECTORY_SEPARATOR);
-define('WWWPATH', str_replace(array('\\', '\\\\'), '/', dirname(__FILE__)));
-
-if(defined('YII_ENV') && YII_ENV=='development'){
+define('BASEPATH',dirname(__FILE__));
+//echo BASEPATH."\r\n";
+if(YII_ENV=='development'){
 	defined('YII_DEBUG') or define('YII_DEBUG',true);
 	$config_file='main-dev.php';
 }else{
 	$config_file='main.php';
 }
-$framework = dirname(__FILE__) . DS.'..'.DS.'framework'.DS.'yii.php';
-$config = WWWPATH . DS .'protected'.DS.'config'.DS.$config_file;
-require_once ($framework);
-Yii::createWebApplication($config)->run();
+define('FRAMEWORK_YII',BASEPATH.DS.DS.'..'.DS.'framework'.DS.'yii.php');
+define('FRAMEWORK_CONFIG',BASEPATH.DS.'..'.DS.'application'. DS .'protected'.DS.'config'.DS.$config_file);
+require_once (FRAMEWORK_YII);
+Yii::createWebApplication(FRAMEWORK_CONFIG)->run();
