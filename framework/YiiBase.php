@@ -146,10 +146,11 @@ class YiiBase
 	 */
 	public static function setApplication($app)
 	{
-		if(self::$_app===null || $app===null)
+		/*if(self::$_app===null || $app===null)
 			self::$_app=$app;
 		else
-			throw new CException(Yii::t('yii','Yii application can only be created once.'));
+			throw new CException(Yii::t('yii','Yii application can only be created once.'));*/
+		self::$_app=$app;
 	}
 
 	/**

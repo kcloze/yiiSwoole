@@ -435,18 +435,22 @@ class CHttpRequest extends CApplicationComponent
 			   $pathInfo=substr($pathInfo,0,$pos);
 
 			$pathInfo=$this->decodePathInfo($pathInfo);
-
-			$scriptUrl=$this->getScriptUrl();
+			/*$scriptUrl=$this->getScriptUrl();
 			$baseUrl=$this->getBaseUrl();
-			if(strpos($pathInfo,$scriptUrl)===0)
+			var_dump(array($pathInfo,$scriptUrl,$baseUrl,$_SERVER['PHP_SELF']));
+			if(strpos($pathInfo,$scriptUrl)===0){
 				$pathInfo=substr($pathInfo,strlen($scriptUrl));
-			elseif($baseUrl==='' || strpos($pathInfo,$baseUrl)===0)
+			}
+			elseif($baseUrl==='' || strpos($pathInfo,$baseUrl)===0){
 				$pathInfo=substr($pathInfo,strlen($baseUrl));
-			elseif(strpos($_SERVER['PHP_SELF'],$scriptUrl)===0)
+			}
+			elseif(strpos($_SERVER['PHP_SELF'],$scriptUrl)===0){
 				$pathInfo=substr($_SERVER['PHP_SELF'],strlen($scriptUrl));
+			}
 			else
 				throw new CException(Yii::t('yii','CHttpRequest is unable to determine the path info of the request.'));
 
+			var_dump(array($pathInfo,'9j9j9'));*/
 			$this->_pathInfo=trim($pathInfo,'/');
 		}
 		return $this->_pathInfo;

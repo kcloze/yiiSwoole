@@ -50,6 +50,8 @@ class HttpServer
 			ob_start();
 			//实例化yii对象
 			try {
+				require_once(FRAMEWORK_YII);
+				$this->application=Yii::createWebApplication(FRAMEWORK_CONFIG);
 				$this->application->run();
 			} catch (Exception $e) {
 				var_dump($e);
@@ -58,6 +60,8 @@ class HttpServer
 		  	ob_end_clean();
 		  	$response->end($result);
 		  	unset($result);
+		  	unset($this->application);
+		  	//Yii::$_app=null;
 		});
 
 		$http->start();
@@ -76,10 +80,10 @@ class HttpServer
 		}
 		define('FRAMEWORK_YII',BASEPATH.DS.'framework'.DS.'yii.php');
 		define('FRAMEWORK_CONFIG',BASEPATH.DS.'application'. DS .'protected'.DS.'config'.DS.$config_file);
-		ob_start();
+		/*ob_start();
 		require_once(FRAMEWORK_YII);
 		$this->application=Yii::createWebApplication(FRAMEWORK_CONFIG);
-		ob_end_clean();
+		ob_end_clean();*/
 
 	}
 
