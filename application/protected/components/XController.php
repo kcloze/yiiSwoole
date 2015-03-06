@@ -16,8 +16,6 @@ class XController extends CController
     protected $_baseUrl;
     protected $_user_info;
     protected $_static_version;
-    protected $_theme;
-    protected $_themePath;
 
     /**
 	 * 初始化
@@ -29,9 +27,6 @@ class XController extends CController
         $this->_gets = Yii::app()->request;
         $this->_baseUrl = Yii::app()->baseUrl;
         $this->_static_version= '1.887';
-        //$this->_theme = Yii::app()->theme;
-        //$this->_themePath = str_replace(array('\\', '\\\\'), '/', Yii::app()->theme->basePath);
-
     }
 
 }
