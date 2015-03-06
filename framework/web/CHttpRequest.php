@@ -431,7 +431,6 @@ class CHttpRequest extends CApplicationComponent
 		if($this->_pathInfo===null)
 		{
 			$pathInfo=$this->getRequestUri();
-
 			if(($pos=strpos($pathInfo,'?'))!==false)
 			   $pathInfo=substr($pathInfo,0,$pos);
 

@@ -358,7 +358,7 @@ class CUrlManager extends CApplicationComponent
 	 * @return string the route (controllerID/actionID) and perhaps GET parameters in path format.
 	 */
 	public function parseUrl($request)
-	{
+	{   
 		if($this->getUrlFormat()===self::PATH_FORMAT)
 		{
 			$rawPathInfo=$request->getPathInfo();
