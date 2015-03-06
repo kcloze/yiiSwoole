@@ -16,7 +16,7 @@ class HttpServer
 
 		$http->set(
 			array(
-				'worker_num' => 1,
+				'worker_num' => 4,
 				'daemonize' => false,
 	            'max_request' => 1,
 	            'dispatch_mode' => 1
@@ -50,7 +50,6 @@ class HttpServer
 			ob_start();
 			//实例化yii对象
 			try {
-				require_once(FRAMEWORK_YII);
 				$this->application=Yii::createWebApplication(FRAMEWORK_CONFIG);
 				$this->application->run();
 			} catch (Exception $e) {
@@ -61,7 +60,6 @@ class HttpServer
 		  	$response->end($result);
 		  	unset($result);
 		  	unset($this->application);
-		  	//Yii::$_app=null;
 		});
 
 		$http->start();
@@ -80,6 +78,7 @@ class HttpServer
 		}
 		define('FRAMEWORK_YII',BASEPATH.DS.DS.'..'.DS.'framework'.DS.'yii.php');
 		define('FRAMEWORK_CONFIG',BASEPATH.DS.'..'.DS.'application'. DS .'protected'.DS.'config'.DS.$config_file);
+		require(FRAMEWORK_YII);
 		/*ob_start();
 		require_once(FRAMEWORK_YII);
 		$this->application=Yii::createWebApplication(FRAMEWORK_CONFIG);
