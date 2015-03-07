@@ -42,9 +42,12 @@ yiiSwoole
 1. centos 6.6 ,cpu 12 core,memory 64G
 2. php-fpm : 2 pool total 200 php-fpm process, pm = static,pm.max_children = 100,pm.max_requests = 2048
 3. swoole_http_server worker_num 200,max_request 10000
+4. ab -c200 -n10000 url
 
-## php-fpm : ab -c200 -n10000 http://yiisw.test.com/
+## php-fpm
     ```
+    ab -c200 -n10000 http://yiisw.test.com/
+
     Server Software:        nginx
     Server Hostname:        yiisw.test.com
     Server Port:            80
@@ -83,8 +86,10 @@ yiiSwoole
      100%   3252 (longest request)
     ```
 
-## swoole_http_server : ab -c200 -n10000 http://127.0.0.1:9501/
+## swoole_http_server
     ```
+    ab -c200 -n10000 http://127.0.0.1:9501/
+
     Server Software:        swoole-http-server
     Server Hostname:        211.147.239.136
     Server Port:            9501
