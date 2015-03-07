@@ -91,7 +91,7 @@ yiiSwoole
     ab -c200 -n10000 http://127.0.0.1:9501/
 
     Server Software:        swoole-http-server
-    Server Hostname:        211.147.239.136
+    Server Hostname:        127.0.0.1
     Server Port:            9501
 
     Document Path:          /
