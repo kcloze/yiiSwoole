@@ -1,7 +1,7 @@
 yiiSwoole
 ========
 
-* Yii 1.1.16 with Swoole Http_Server
+* Yii 1.1.14 with Swoole Http_Server
 * In high-concurrency situations,will be better than php-fpm
 
 ## Requirements

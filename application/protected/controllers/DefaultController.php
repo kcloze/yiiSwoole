@@ -1,25 +1,28 @@
 <?php
 
-class DefaultController extends XController {
+class DefaultController extends XController
+{
 
-    public function init() {
+    public function init()
+    {
         parent::init();
     }
 
-
-    public function filters() {
+    public function filters()
+    {
         if (Yii::app()->params['allowCache'] == 'Y') {
 
         }
     }
 
-    public function actionIndex() {
+    public function actionIndex()
+    {
         echo date('Y-m-d H:i:s');
+        exitYiiSwoole("Greet, kcloze!");
     }
-    public function actionMe() {
+    public function actionMe()
+    {
         echo 'me';
     }
-
-
 
 }

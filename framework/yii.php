@@ -10,7 +10,7 @@
  * @since 1.0
  */
 
-require(dirname(__FILE__).'/YiiBase.php');
+require dirname(__FILE__) . '/YiiBase.php';
 
 /**
  * Yii is a helper class serving common framework functionalities.
@@ -22,6 +22,16 @@ require(dirname(__FILE__).'/YiiBase.php');
  * @package system
  * @since 1.0
  */
+
 class Yii extends YiiBase
 {
+}
+//兼容exit语法
+function exitYiiSwoole($msg)
+{
+    if (!defined('SWOOLE')) {
+        exit($msg);
+    } else {
+        Yii::$_swooleResponse->end($msg);
+    }
 }
